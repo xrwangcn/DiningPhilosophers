@@ -164,7 +164,7 @@ namespace WindowsFormsApplication1
 
         public void RequestFork(Philosopher phil)
         {
-            if (holder == null || (holder.philID > phil.philID && holder.eating == false))
+            if (holder == null || ((holder.philID)%4 > phil.philID && holder.eating == false))
             {
                 holder = phil;
             }
@@ -281,27 +281,34 @@ namespace WindowsFormsApplication1
                 while (dining)
                 {
 
-                    Status = "Waiting";
+                    Status = "等待另一只叉子...(•̀へ•́╮)";
                     {
                         Thread.Sleep(new Random(DateTime.Now.Millisecond).Next(0, (int)(500 * pDelay)));
-                        if (leftFork.holder != this&&leftFork.holder !=null)
+                        if (leftFork.holder != this)
                         {
                             //ForkStatus = "LeftFork: " + leftFork.forkID;
-                            ForkStatus = "LeftFork " + leftFork.forkID +" holder: "+ leftFork.holder.philID;
+                            if (leftFork.holder != null)
+                                ForkStatus = "我要找左叉子 " + leftFork.forkID + " ！哲学家" + leftFork.holder.philID + "抢了我的叉子..(ㅍ_ㅍ)";
+                            else
+                                ForkStatus = "我要找左叉子 " + leftFork.forkID + " (ㅍ_ㅍ)";
                             leftFork.RequestFork(this);
                         }
-                        ForkStatus = "HoldFork: " + leftFork.forkID;
+                        ForkStatus = "我拿着左叉子 " + leftFork.forkID;
 
                         Thread.Sleep(new Random(DateTime.Now.Millisecond).Next(0, (int)(500 * pDelay)));
                         if (rightFork.holder != this)
                         {
-                            ForkStatus = "RightFork: " + rightFork.forkID + " " + ForkStatus;
+                            //ForkStatus = "RightFork: " + rightFork.forkID + " " + ForkStatus;
+                            if (rightFork.holder != null)
+                                ForkStatus = "我要找右叉子 " + rightFork.forkID + " ！哲学家" + rightFork.holder.philID + "抢了我的叉子..(ㅍ_ㅍ)";
+                            else
+                                ForkStatus = "我要找右叉子 " + rightFork.forkID + " (ㅍ_ㅍ)";
                             rightFork.RequestFork(this);
                         }
-                        ForkStatus = "HoldFork: " + leftFork.forkID + ", " + rightFork.forkID;
+                        ForkStatus = "我拿着左叉子 " + leftFork.forkID + ", 我拿着右叉子 " + rightFork.forkID;
                     }
 
-                    Status = "Eating";
+                    Status = "我开始吃啦...щ(゜ロ゜щ)";
                     {
                         eating = true;
                         Thread.Sleep(new Random(DateTime.Now.Millisecond).Next(0, (int)(500 * pDelay)));
@@ -309,17 +316,17 @@ namespace WindowsFormsApplication1
                         eating = false;
                     }
 
-                    Status = "Putting";
+                    Status = "吃完了放叉子...(•̀ω•́)✧";
                     {
-                        leftFork.CleanFork();
-                        ForkStatus = "HoldFork: " + rightFork.forkID;
+                        //leftFork.CleanFork();
+                        ForkStatus = "我放下了左叉子，还剩下右叉子 " + rightFork.forkID;
                         Thread.Sleep(new Random(DateTime.Now.Millisecond).Next(0, (int)(500 * pDelay)));
                         //rightFork.CleanFork();
                         ForkStatus = "";
                         Thread.Sleep(new Random(DateTime.Now.Millisecond).Next(0, (int)(500 * pDelay)));
                     }
 
-                    Status = "Thinking";
+                    Status = "别打扰我思考...(ｰ̀дｰ́)";
                     {
                         Thread.Sleep(new Random(DateTime.Now.Millisecond).Next(0, (int)(500 * (pDelay + 1))));
                     }

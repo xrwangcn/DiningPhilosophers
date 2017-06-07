@@ -52,7 +52,7 @@
             this.btn_Start.Location = new System.Drawing.Point(336, 14);
             this.btn_Start.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_Start.Name = "btn_Start";
-            this.btn_Start.Size = new System.Drawing.Size(407, 106);
+            this.btn_Start.Size = new System.Drawing.Size(716, 106);
             this.btn_Start.TabIndex = 0;
             this.btn_Start.Text = "Start";
             this.btn_Start.UseVisualStyleBackColor = true;
@@ -60,10 +60,10 @@
             // 
             // nud_numPhils
             // 
-            this.nud_numPhils.Location = new System.Drawing.Point(208, 30);
+            this.nud_numPhils.Location = new System.Drawing.Point(208, 24);
             this.nud_numPhils.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.nud_numPhils.Name = "nud_numPhils";
-            this.nud_numPhils.Size = new System.Drawing.Size(59, 25);
+            this.nud_numPhils.Size = new System.Drawing.Size(59, 27);
             this.nud_numPhils.TabIndex = 1;
             this.nud_numPhils.Value = new decimal(new int[] {
             5,
@@ -74,12 +74,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 32);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(118, 26);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 15);
+            this.label1.Size = new System.Drawing.Size(84, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Number of Philosophers";
+            this.label1.Text = "哲学家个数";
             // 
             // lv_info
             // 
@@ -91,34 +92,35 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
+            this.lv_info.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lv_info.FullRowSelect = true;
-            this.lv_info.Location = new System.Drawing.Point(16, 127);
+            this.lv_info.Location = new System.Drawing.Point(13, 126);
             this.lv_info.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.lv_info.Name = "lv_info";
-            this.lv_info.Size = new System.Drawing.Size(725, 161);
+            this.lv_info.Size = new System.Drawing.Size(1034, 218);
             this.lv_info.TabIndex = 3;
             this.lv_info.UseCompatibleStateImageBehavior = false;
             this.lv_info.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Philosopher";
-            this.columnHeader1.Width = 70;
+            this.columnHeader1.Text = "哲学家序号";
+            this.columnHeader1.Width = 101;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Status";
-            this.columnHeader2.Width = 102;
+            this.columnHeader2.Text = "状态";
+            this.columnHeader2.Width = 202;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Forks";
-            this.columnHeader3.Width = 215;
+            this.columnHeader3.Text = "使用叉子状态";
+            this.columnHeader3.Width = 376;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "# Meals";
-            this.columnHeader4.Width = 55;
+            this.columnHeader4.Text = "吃饭次数";
+            this.columnHeader4.Width = 93;
             // 
             // groupBox1
             // 
@@ -126,6 +128,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.nud_numPhils);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.Location = new System.Drawing.Point(16, 6);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox1.Name = "groupBox1";
@@ -133,7 +136,7 @@
             this.groupBox1.Size = new System.Drawing.Size(312, 114);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Setup";
+            this.groupBox1.Text = "Para";
             // 
             // nud_Delay
             // 
@@ -143,7 +146,7 @@
             0,
             0,
             65536});
-            this.nud_Delay.Location = new System.Drawing.Point(208, 78);
+            this.nud_Delay.Location = new System.Drawing.Point(208, 72);
             this.nud_Delay.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.nud_Delay.Maximum = new decimal(new int[] {
             10,
@@ -151,7 +154,7 @@
             0,
             0});
             this.nud_Delay.Name = "nud_Delay";
-            this.nud_Delay.Size = new System.Drawing.Size(59, 25);
+            this.nud_Delay.Size = new System.Drawing.Size(59, 27);
             this.nud_Delay.TabIndex = 6;
             this.nud_Delay.Value = new decimal(new int[] {
             1,
@@ -162,10 +165,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(153, 80);
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(153, 74);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 15);
+            this.label2.Size = new System.Drawing.Size(49, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Delay";
             // 
@@ -173,7 +177,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(758, 312);
+            this.ClientSize = new System.Drawing.Size(1067, 369);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lv_info);
             this.Controls.Add(this.btn_Start);
@@ -181,7 +185,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MinimumSize = new System.Drawing.Size(18, 339);
             this.Name = "Form1";
-            this.Text = "Dining Philosophers";
+            this.Text = "哲学家就餐问题";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.nud_numPhils)).EndInit();
