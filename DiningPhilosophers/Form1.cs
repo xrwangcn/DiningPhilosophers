@@ -141,7 +141,7 @@ namespace WindowsFormsApplication1
                 if (e.KeyCode == Keys.M)
                 {
                     //用户按下了Ctrl+C.
-                    MessageBox.Show("Restart!");
+                    MessageBox.Show("重新开始!(≖‿≖)✧");
                     interrupt("Stop");
                     interrupt("Start");
                 }
